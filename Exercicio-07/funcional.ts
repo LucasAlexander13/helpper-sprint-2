@@ -13,12 +13,12 @@ class ListarValores {
         return Math.max(...this.lista);
     }
 
-    private somatorio(valor: number, auxiliar: number){
+    private somarValores(valor: number, auxiliar: number){
         return valor + auxiliar;
     }
 
     private valorMedio() {
-        return this.lista.reduce(this.somatorio, 0) / this.lista.length;
+        return this.lista.reduce(this.somarValores, 0) / this.lista.length;
     }
 
     retornarValores(){

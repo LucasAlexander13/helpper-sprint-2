@@ -7,8 +7,7 @@ class Palavra {
     }
 
     public contarVogais(): number {
-        let numVogais = (this.palavra.match(this.vogais) || []).length;
-        return numVogais;
+        return (this.palavra.match(this.vogais) || []).length;
     }
 }
 

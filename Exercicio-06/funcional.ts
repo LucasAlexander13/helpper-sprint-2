@@ -16,27 +16,27 @@ let lista: Pessoa[] = [
 ----------------------------------------------------------------------------------*/
 
 class Cientistas {
-    lista_cientistas: Pessoa[];
+    listaCientistas: Pessoa[];
 
-    constructor(lista_inserida: Pessoa[]) {
-        this.lista_cientistas = lista_inserida;
+    constructor(listaInserida: Pessoa[]) {
+        this.listaCientistas = listaInserida;
     }
     // encontra a informação da lista a partir do id passado como parâmetro
     retornarInfo(id: number, tipo: string): string {
-        return this.lista_cientistas.find((pessoa: Pessoa) => pessoa[tipo] === id)?[tipo];
+        return this.listaCientistas.find((pessoa: Pessoa) => pessoa.id === id)?.[tipo];
     }
     // filtra a lista removendo os itens do id passado
     apagarItem(id: number): Pessoa[] {
-        return this.lista_cientistas.filter((pessoa: Pessoa) => pessoa.id !== id);
+        return this.listaCientistas.filter((pessoa: Pessoa) => pessoa.id !== id);
     }
     // altera informações a partir do id e do tipo de informação
     alterarInfo(id: number, tipo: string, info: string): Pessoa[] {
         // encontra a posição na lista em que o id é o mesmo ao inserido, e -1 se inexistente
-        const indice: number = this.lista_cientistas.findIndex(lista => lista.id === id);
+        const indice: number = this.listaCientistas.findIndex(lista => lista.id === id);
         const idInexistente: number = -1;
         // se o id existir, atualiza a informação para a nova
-        if (indice !== idInexistente) { this.lista_cientistas[indice][tipo] = info }
+        if (indice !== idInexistente) { this.listaCientistas[indice][tipo] = info }
         // retorna a lista, independente de alterações
-        return this.lista_cientistas;
+        return this.listaCientistas;
     }
 }

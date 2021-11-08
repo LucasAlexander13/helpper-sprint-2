@@ -21,27 +21,16 @@ class Cientistas {
     constructor(lista_inserida: Pessoa[]) {
         this.lista_cientistas = lista_inserida;
     }
-    // encontra a Bio da lista a partir do id passado como parâmetro
-    retornarBio(id: number): string {
-        let bio: string;
+    // encontra a informação da lista a partir do id passado como parâmetro
+    retornarInfo(id: number, tipo: string): string {
+        let info: string;
 
         for(let indice: number = 0; indice < this.lista_cientistas.length; indice++) {
             if (this.lista_cientistas[indice]['id'] === id) {
-                bio = this.lista_cientistas[indice]['bio'];
+                info = this.lista_cientistas[indice][tipo];
             }
         }
-        return bio;
-    }
-    // encontra o Name da lista a partir do id passado como parâmetro
-    retornarNome(id: number): string {
-        let nome: string;
-
-        for(let indice: number = 0; indice < this.lista_cientistas.length; indice++) {
-            if (this.lista_cientistas[indice]['id'] === id) {
-                nome = this.lista_cientistas[indice]['name'];
-            }
-        }
-        return nome;
+        return info;
     }
     // filtra a lista removendo os itens do id passado
     apagarItem(id: number): Pessoa[] {

@@ -21,13 +21,9 @@ class Cientistas {
     constructor(lista_inserida: Pessoa[]) {
         this.lista_cientistas = lista_inserida;
     }
-    // encontra a Bio da lista a partir do id passado como parâmetro
-    retornarBio(id: number): string {
-        return this.lista_cientistas.find((pessoa: Pessoa) => pessoa.id === id)?.bio;
-    }
-    // encontra o Name da lista a partir do id passado como parâmetro
-    retornarNome(id: number): string {
-        return this.lista_cientistas.find((pessoa: Pessoa) => pessoa.id === id)?.name;
+    // encontra a informação da lista a partir do id passado como parâmetro
+    retornarInfo(id: number, tipo: string): string {
+        return this.lista_cientistas.find((pessoa: Pessoa) => pessoa[tipo] === id)?[tipo];
     }
     // filtra a lista removendo os itens do id passado
     apagarItem(id: number): Pessoa[] {

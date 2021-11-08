@@ -2,13 +2,13 @@ class Palavra {
     private readonly vogais: RegExp = /[aáàãâäeéèêëiíìîïoóòõôöuúùûü]/gi
     palavra: string;
 
-    constructor(palavra_inserida: string) {
-        this.palavra = palavra_inserida;
+    constructor(palavraInserida: string) {
+        this.palavra = palavraInserida;
     }
 
     public contarVogais(): number {
-        let num_vogais = (this.palavra.match(this.vogais) || []).length;
-        return num_vogais;
+        let numVogais = (this.palavra.match(this.vogais) || []).length;
+        return numVogais;
     }
 }
 
@@ -19,14 +19,14 @@ console.log(`${nome.palavra} possui ${nome.contarVogais()} vogais.`);
 console.log(`${sobrenome.palavra} possui ${sobrenome.contarVogais()} vogais.`);
 
 let continuar: boolean = true;
-let palavra_usuario: Palavra;
+let palavraUsuario: Palavra;
 
 while (continuar === true){
-    palavra_usuario = new Palavra(window.prompt('Digite uma palavra: '));
-    console.log(palavra_usuario.palavra);
+    palavraUsuario = new Palavra(window.prompt('Digite uma palavra: '));
+    console.log(palavraUsuario.palavra);
 
-    window.alert(`O número de vogais da palavra é: ${palavra_usuario.contarVogais()}`);
-    console.log(palavra_usuario.contarVogais());
+    window.alert(`O número de vogais da palavra é: ${palavraUsuario.contarVogais()}`);
+    console.log(palavraUsuario.contarVogais());
     
     continuar = window.confirm("Deseja inserir outra palavra?");
 }

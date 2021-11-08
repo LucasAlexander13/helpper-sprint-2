@@ -9,34 +9,29 @@ let lista = [
 ------------Código em paradigma Funcional-------------------------------------------
 ----------------------------------------------------------------------------------*/
 class Cientistas {
-    constructor(lista_inserida) {
-        this.lista_cientistas = lista_inserida;
+    constructor(listaInserida) {
+        this.listaCientistas = listaInserida;
     }
-    // encontra a Bio da lista a partir do id passado como parâmetro
-    retornarBio(id) {
+    // encontra a informação da lista a partir do id passado como parâmetro
+    retornarInfo(id, tipo) {
         var _a;
-        return (_a = this.lista_cientistas.find((pessoa) => pessoa.id === id)) === null || _a === void 0 ? void 0 : _a.bio;
-    }
-    // encontra o Name da lista a partir do id passado como parâmetro
-    retornarNome(id) {
-        var _a;
-        return (_a = this.lista_cientistas.find((pessoa) => pessoa.id === id)) === null || _a === void 0 ? void 0 : _a.name;
+        return (_a = this.listaCientistas.find((pessoa) => pessoa.id === id)) === null || _a === void 0 ? void 0 : _a[tipo];
     }
     // filtra a lista removendo os itens do id passado
     apagarItem(id) {
-        return this.lista_cientistas.filter((pessoa) => pessoa.id !== id);
+        return this.listaCientistas.filter((pessoa) => pessoa.id !== id);
     }
     // altera informações a partir do id e do tipo de informação
     alterarInfo(id, tipo, info) {
         // encontra a posição na lista em que o id é o mesmo ao inserido, e -1 se inexistente
-        const indice = this.lista_cientistas.findIndex(lista => lista.id === id);
+        const indice = this.listaCientistas.findIndex(lista => lista.id === id);
         const idInexistente = -1;
         // se o id existir, atualiza a informação para a nova
         if (indice !== idInexistente) {
-            this.lista_cientistas[indice][tipo] = info;
+            this.listaCientistas[indice][tipo] = info;
         }
         // retorna a lista, independente de alterações
-        return this.lista_cientistas;
+        return this.listaCientistas;
     }
 }
 //# sourceMappingURL=funcional.js.map

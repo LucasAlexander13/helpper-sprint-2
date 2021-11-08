@@ -1,5 +1,5 @@
 class Palavra {
-    vogais: RegExp = /[aáàãâäeéèêëiíìîïoóòõôöuúùûü]/gi
+    private readonly vogais: RegExp = /[aáàãâäeéèêëiíìîïoóòõôöuúùûü]/gi
     palavra: string;
 
     constructor(palavra_inserida: string) {

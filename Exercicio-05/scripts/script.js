@@ -1,24 +1,21 @@
 class Palavra {
-    constructor(palavra_inserida) {
+    constructor(palavraInserida) {
         this.vogais = /[aáàãâäeéèêëiíìîïoóòõôöuúùûü]/gi;
-        this.palavra = palavra_inserida;
+        this.palavra = palavraInserida;
     }
+    // compara a palavra com as vogais do Regex e retorna a quantidade
     contarVogais() {
-        let num_vogais = (this.palavra.match(this.vogais) || []).length;
-        return num_vogais;
+        return (this.palavra.match(this.vogais) || []).length;
     }
 }
-const nome = new Palavra('Lucas');
-const sobrenome = new Palavra('Alexander');
-console.log(`${nome.palavra} possui ${nome.contarVogais()} vogais.`);
-console.log(`${sobrenome.palavra} possui ${sobrenome.contarVogais()} vogais.`);
-let continuar = true;
-let palavra_usuario;
-while (continuar === true) {
-    palavra_usuario = new Palavra(window.prompt('Digite uma palavra: '));
-    console.log(palavra_usuario.palavra);
-    window.alert(`O número de vogais da palavra é: ${palavra_usuario.contarVogais()}`);
-    console.log(palavra_usuario.contarVogais());
-    continuar = window.confirm("Deseja inserir outra palavra?");
+function numVogais() {
+    // armazena em contantes os elementos HTML
+    const formulario = document.getElementById("formulario");
+    const palavraDigitada = document.getElementById("fPalavraDigitada").value;
+    // cria um objeto Palavra com a palavra digitada como atributo do objeto 
+    const palavraUsuario = new Palavra(palavraDigitada);
+    // mostra o resultado da consulta como um window alert e limpa o formulário
+    window.alert(`A palavra "${palavraDigitada}" possui: ${palavraUsuario.contarVogais()} vogais.`);
+    formulario.reset();
 }
 //# sourceMappingURL=script.js.map

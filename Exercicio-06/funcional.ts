@@ -16,7 +16,7 @@ let lista: Pessoa[] = [
 ----------------------------------------------------------------------------------*/
 
 class Cientistas {
-    listaCientistas: Pessoa[];
+    private listaCientistas: Pessoa[];
 
     constructor(listaInserida: Pessoa[]) {
         this.listaCientistas = listaInserida;

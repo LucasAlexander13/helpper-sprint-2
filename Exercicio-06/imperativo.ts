@@ -11,9 +11,6 @@ let lista: Array<Pessoa> = [
     {"id" : 3, "name": "Nikola Tesla", "bio" : "Nikola Tesla foi um inventor, engenheiro eletrotécnico e engenheiro mecânico sérvio, mais conhecido por suas contribuições ao projeto do moderno sistema de fornecimento de eletricidade em corrente alternada."},
     {"id" : 4, "name": "Nicolau Copérnico", "bio": "Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar."}
 ];
-/*----------------------------------------------------------------------------------
-------------Código em paradigma Imperativo------------------------------------------
-----------------------------------------------------------------------------------*/
 
 class Cientistas {
     /**
@@ -42,8 +39,9 @@ class Cientistas {
      */
     retornarInfo(id: number, tipo: string): string {
         let info: string;
-
+        // para cada objeto na listaCientistas...
         for(let indice: number = 0; indice < this.listaCientistas.length; indice++) {
+            // se o id for igual ao id inserido: retorna a informação do tipo solicitado
             if (this.listaCientistas[indice]['id'] === id) {
                 info = this.listaCientistas[indice][tipo];
             }

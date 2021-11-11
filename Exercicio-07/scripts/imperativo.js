@@ -1,32 +1,65 @@
-class ListarValores {
-    constructor(lista_inserida) {
-        this.converterLista(lista_inserida);
+/**
+* @class Valores
+* Serve para instanciar objetos de Arrays numéricas
+* com um método para retornar seus extremos e sua média
+*
+* @property lista
+* lista numérica recebida ao instanciar a classe
+*/
+class Valores {
+    // utiliza o método converterLista para armazenar os valores da lista
+    constructor(listaInserida) {
+        this.converterLista(listaInserida);
     }
-    converterLista(lista_inserida) {
-        // para cada valor na lista inserida, verifica se é numérico e adiciona à lista
-        for (let indice = 0; indice < lista_inserida.length; indice++) {
-            let item = Number(lista_inserida[indice]);
-            if (!isNaN(item)) {
-                this.lista.push(item);
+    /**
+     * @method converterLista
+     * converte os valores da listaInserida e adiciona à lista
+     *
+     * @param listaInserida - Array de valores que serão filtrados e passados para a lista
+     */
+    converterLista(listaInserida) {
+        // para cada item na lista inserida...
+        for (let indice = 0; indice < listaInserida.length; indice++) {
+            // armazena o valor e checa se é numérico, adicionando à lista
+            let valor = Number(listaInserida[indice]);
+            if (!isNaN(valor)) {
+                this.lista.push(valor);
             }
         }
     }
+    /**
+     * @method retornarValores
+     * método principal da classe, usado para retornar os valores da lista
+     *
+     * declara os valores da lista e calcula o menor e maior valor, assim como
+     * a média aritmética entre eles
+     *
+     * @returns Array numérica contendo o maior, menor e valor médio
+     */
     retornarValores() {
+        // declaração dos valores usados no algoritmo
         let somatoria = 0;
-        let maior_valor = this.lista[0];
-        let menor_valor = this.lista[0];
-        // para cada valor na lista, verificar o maior, o menor e realizar a soma
+        let maiorValor = this.lista[0];
+        let menorValor = this.lista[0];
+        // para cada valor contido na lista numérica...
         for (let indice = 0; indice < this.lista.length; indice++) {
-            if (this.lista[indice] > maior_valor) {
-                maior_valor = this.lista[indice];
+            // verifica se o valor atual é maior que o maiorValor
+            if (this.lista[indice] > maiorValor) {
+                // atualiza o valor se for maior
+                maiorValor = this.lista[indice];
             }
-            else if (this.lista[indice] < menor_valor) {
-                menor_valor = this.lista[indice];
+            // verifica se o valor atual é menor que o menorValor
+            else if (this.lista[indice] < menorValor) {
+                // atualiza o valor se for menor
+                menorValor = this.lista[indice];
             }
+            // adiciona o valor no somatório
             somatoria += this.lista[indice];
         }
-        let valor_medio = somatoria / this.lista.length;
-        return [maior_valor, menor_valor, valor_medio];
+        // calcula a média aritmética por meio da somatória
+        let valorMedio = somatoria / this.lista.length;
+        // retorna os valores dentro de uma lista numérica
+        return [maiorValor, menorValor, valorMedio];
     }
 }
 //# sourceMappingURL=imperativo.js.map

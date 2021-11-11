@@ -11,7 +11,7 @@ export abstract class Pessoa {
     protected id: number;
     protected name: string;
     protected bio: string;
-    criouAda: boolean;
+    homenageAda: boolean;
 
     /**
      * @constructor

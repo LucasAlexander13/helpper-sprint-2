@@ -9,6 +9,5 @@ export var EnumPessoa;
     EnumPessoa["Turing"] = "Alan Turing";
     EnumPessoa["Tesla"] = "Nikola Tesla";
     EnumPessoa["Copernico"] = "Nicolau Copernico";
-    EnumPessoa["Ichbiah"] = "Jean Ichbiah";
 })(EnumPessoa || (EnumPessoa = {}));
 //# sourceMappingURL=Enum.js.map

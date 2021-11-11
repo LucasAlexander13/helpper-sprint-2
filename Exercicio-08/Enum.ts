@@ -8,5 +8,4 @@ export enum EnumPessoa {
     Turing = "Alan Turing",
     Tesla = "Nikola Tesla",
     Copernico = "Nicolau Copernico",
-    Ichbiah = "Jean Ichbiah"
 }

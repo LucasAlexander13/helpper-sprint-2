@@ -1,27 +1,27 @@
 class ListarValores {
-    lista: number[];
+    private lista: Array<number>;
 
-    constructor(lista_inserida: any[]){
-        this.lista = lista_inserida.filter(valor => !isNaN(valor)).map(Number);
+    constructor(listaInserida: Array<any>){
+        this.lista = listaInserida.filter(valor => !isNaN(valor)).map(Number);
     }
 
-    private menorValor() {
+    private menorValor(): number {
         return Math.min(...this.lista);
     }
 
-    private maiorValor() {
+    private maiorValor(): number {
         return Math.max(...this.lista);
     }
 
-    private somarValores(valor: number, auxiliar: number){
+    private somarValores(valor: number, auxiliar: number): number {
         return valor + auxiliar;
     }
 
-    private valorMedio() {
+    private valorMedio(): number {
         return this.lista.reduce(this.somarValores, 0) / this.lista.length;
     }
 
-    retornarValores(){
-        return [this.maiorValor, this.menorValor, this.valorMedio]
+    retornarValores(): Array<number>{
+        return [this.maiorValor(), this.menorValor(), this.valorMedio()]
     }
 }

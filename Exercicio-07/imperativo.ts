@@ -1,36 +1,36 @@
 class ListarValores {
-    lista: number[];
+    private lista: Array<number>;
 
-    constructor(lista_inserida: any[]){
-        this.converterLista(lista_inserida)
+    constructor(listaInserida: Array<any>){
+        this.converterLista(listaInserida)
     }
 
-    private converterLista(lista_inserida) {
+    private converterLista(listaInserida: Array<any>) {
         // para cada valor na lista inserida, verifica se é numérico e adiciona à lista
-        for (let indice: number = 0; indice < lista_inserida.length; indice++){
-            let item = Number(lista_inserida[indice]);
+        for (let indice: number = 0; indice < listaInserida.length; indice++){
+            let item = Number(listaInserida[indice]);
             if (!isNaN(item)){
                 this.lista.push(item);
             }
         }
     }
 
-    retornarValores() {
+    retornarValores(): Array<number> {
         let somatoria: number = 0;
-        let maior_valor: number = this.lista[0];
-        let menor_valor: number = this.lista[0];
+        let maiorValor: number = this.lista[0];
+        let menorValor: number = this.lista[0];
         // para cada valor na lista, verificar o maior, o menor e realizar a soma
         for (let indice: number = 0; indice < this.lista.length; indice++){
 
-            if (this.lista[indice] > maior_valor) {
-                maior_valor = this.lista[indice];
+            if (this.lista[indice] > maiorValor) {
+                maiorValor = this.lista[indice];
             }
-            else if (this.lista[indice] < menor_valor) {
-                menor_valor = this.lista[indice];
+            else if (this.lista[indice] < menorValor) {
+                menorValor = this.lista[indice];
             }
             somatoria += this.lista[indice];
         }
-        let valor_medio: number = somatoria / this.lista.length;
-        return [maior_valor, menor_valor, valor_medio];
+        let valorMedio: number = somatoria / this.lista.length;
+        return [maiorValor, menorValor, valorMedio];
     }
 }

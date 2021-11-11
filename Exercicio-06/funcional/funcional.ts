@@ -12,15 +12,15 @@ let lista: Array<Pessoa> = [
     {"id" : 4, "name": "Nicolau Copérnico", "bio": "Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar."}
 ];
 
+/**
+ * @class Cientistas
+ * Representa uma Array de Pessoas, contendo métodos que permitem a manipulação
+ * das informações contidas nessa Array de Objetos.
+ * 
+ * @property listaCientistas
+ * Array de objetos do tipo Pessoa, recebida ao instanciar a classe.
+ */
 class Cientistas {
-    /**
-     * @class Cientistas
-     * Representa uma Array de Pessoas, contendo métodos que permitem a manipulação
-     * das informações contidas nessa Array de Objetos.
-     * 
-     * @property listaCientistas
-     * Array de objetos do tipo Pessoa, recebida ao instanciar a classe.
-     */
 
     private listaCientistas: Array<Pessoa>;
     // passa para a listaCientistas o valor da listaInserida ao instanciar a classe

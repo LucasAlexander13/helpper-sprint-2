@@ -17,16 +17,13 @@ export class FabricaPessoa {
      * @returns nova subclasse de pessoa
      */
     retornarPessoa(cientista: EnumPessoa): Pessoa {
-        if (cientista === EnumPessoa.Lovelace)
-            return new Lovelace();
-        else if (cientista === EnumPessoa.Turing)
-            return new Turing();
-        else if (cientista === EnumPessoa.Tesla)
-            return new Tesla();
-        else if (cientista === EnumPessoa.Copernico)
-            return new Copernico();
-        else
-            return null;
+        switch(cientista) {
+            case EnumPessoa.Lovelace: return new Lovelace();
+            case EnumPessoa.Turing: return new Turing();
+            case EnumPessoa.Tesla: return new Tesla();
+            case EnumPessoa.Copernico: return new Copernico();
+            default: return null;
+        }
     }
 }
 

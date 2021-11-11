@@ -1,11 +1,11 @@
 /**
  * Pessoa
- * @class
+ * 
  * Classe base que serve para criar objetos do tipo pessoa
  * 
- * @property id - number
- * @property name - string
- * @property bio - string
+ * id - number
+ * name - string
+ * bio - string
  */
 export abstract class Pessoa {
     protected id: number;
@@ -14,7 +14,8 @@ export abstract class Pessoa {
     homenageAda: boolean;
 
     /**
-     * @constructor
+     * Construtor
+     * 
      * Caso receba um dos valores (id, name, bio) armazena nas propriedades
      * 
      * @param id - number
@@ -28,9 +29,9 @@ export abstract class Pessoa {
     }
 
     /**
-     * @method retornarInfo( )
+     * retornarInfo( )
      * 
-     * @returns string - etorna os valores formatados do nome e da bio da pessoa
+     * @returns string - retorna os valores formatados do nome e da bio da pessoa
      */
     public retornarInfo(): string {
         return `Nome: ${this.name}\nBio: ${this.bio}`

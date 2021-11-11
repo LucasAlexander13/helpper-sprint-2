@@ -1,6 +1,5 @@
 /**
  * EnumPessoa
- * @enum string
  * listagem de cientistas para a factory
  */
 export enum EnumPessoa {

@@ -3,9 +3,6 @@ import { EnumPessoa } from "./Enum";
 
 /**
  * FabricaPessoa
- * @class
- * Permite instanciar objetos de acordo 
- * 
  * 
  * Classe utilizada para permitir a instanciação de objetos
  * de acordo com a opção escolhida
@@ -34,9 +31,9 @@ export class FabricaPessoa {
 }
 
 /**
- * @subclass Pessoa
+ * Subclasse de Pessoa
  * 
- * @constructor constrói o objeto com as informações de Ada Lovelace
+ * constrói o objeto com as informações de Ada Lovelace
  */
 class Lovelace extends Pessoa{
     constructor(){
@@ -47,9 +44,9 @@ class Lovelace extends Pessoa{
 }
 
 /**
- * @subclass Pessoa
+ * Subclasse de Pessoa
  * 
- * @constructor constrói o objeto com as informações de Alan Turing
+ * constrói o objeto com as informações de Alan Turing
  */
 class Turing extends Pessoa{
     constructor(){
@@ -60,9 +57,9 @@ class Turing extends Pessoa{
 }
 
 /**
- * @subclass Pessoa
+ * Subclasse de Pessoa
  * 
- * @constructor constrói o objeto com as informações de Nikola Tesla
+ * constrói o objeto com as informações de Nikola Tesla
  */
 class Tesla extends Pessoa{
     constructor(){
@@ -73,9 +70,9 @@ class Tesla extends Pessoa{
 }
 
 /**
- * @subclass Pessoa
+ * Subclasse de Pessoa
  * 
- * @constructor constrói o objeto com as informações de Nicolau Copérnico
+ * constrói o objeto com as informações de Nicolau Copérnico
  */
 class Copernico extends Pessoa{
     constructor(){

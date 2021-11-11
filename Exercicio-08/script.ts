@@ -1,6 +1,6 @@
-import {EnumPessoa} from "./Enum";
-import {FabricaPessoa} from "./Factory"
-import {Pessoa} from "./Pessoa"
+import { EnumPessoa } from "./Enum";
+import { FabricaPessoa } from "./Factory";
+import { Pessoa } from "./Pessoa";
 
 //a) Após a leitura, crie uma Factory que, a partir da lista do exercício 6, 
 //dado um array, devolva o nome e a bio da pessoa.

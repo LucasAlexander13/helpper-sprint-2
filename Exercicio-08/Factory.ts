@@ -1,5 +1,5 @@
-import {Pessoa} from "./Pessoa"
-import {EnumPessoa} from "./Enum"
+import { Pessoa } from "./Pessoa";
+import { EnumPessoa } from "./Enum";
 
 /**
  * FabricaPessoa

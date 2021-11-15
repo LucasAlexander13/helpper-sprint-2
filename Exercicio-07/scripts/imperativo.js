@@ -1,19 +1,23 @@
 /**
-* @class Valores
+* Valores
+*
 * Serve para instanciar objetos de Arrays numéricas
 * com um método para retornar seus extremos e sua média
 *
-* @property lista
+* Constructor - Array<any>
+*
 * lista numérica recebida ao instanciar a classe
 */
 class Valores {
     // utiliza o método converterLista para armazenar os valores da lista
     constructor(listaInserida) {
+        this.lista = [];
         this.converterLista(listaInserida);
     }
     /**
-     * @method converterLista
-     * converte os valores da listaInserida e adiciona à lista
+     * converterLista()
+     *
+     * Converte os valores da listaInserida e adiciona à lista
      *
      * @param listaInserida - Array de valores que serão filtrados e passados para a lista
      */
@@ -28,15 +32,16 @@ class Valores {
         }
     }
     /**
-     * @method retornarValores
-     * método principal da classe, usado para retornar os valores da lista
+     * listarValores()
      *
-     * declara os valores da lista e calcula o menor e maior valor, assim como
+     * Método principal da classe, usado para retornar os valores da lista
+     *
+     * Declara os valores da lista e calcula o menor e maior valor, assim como
      * a média aritmética entre eles
      *
      * @returns Array numérica contendo o maior, menor e valor médio
      */
-    retornarValores() {
+    listarValores() {
         // declaração dos valores usados no algoritmo
         let somatoria = 0;
         let maiorValor = this.lista[0];
@@ -62,4 +67,7 @@ class Valores {
         return [maiorValor, menorValor, valorMedio];
     }
 }
+// Teste do pardigma imperativo 
+const listaNumerica = new Valores([1, "Gato", 2, "3", 4, 5]);
+console.log(listaNumerica.listarValores());
 //# sourceMappingURL=imperativo.js.map

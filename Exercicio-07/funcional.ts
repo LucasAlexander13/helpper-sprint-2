@@ -70,6 +70,10 @@ class Valores {
      * @returns Array numérica contendo o maior, menor e valor médio
      */
     listarValores(): Array<number>{
-        return [this.maiorValor(), this.menorValor(), this.valorMedio()]
+        return [this.maiorValor(), this.menorValor(), this.valorMedio()];
     }
 }
+
+// Teste do pardigma funcional 
+const listaNumerica: Valores = new Valores([1, "Gato", 2, "3", 4, 5]);
+console.log(listaNumerica.listarValores());

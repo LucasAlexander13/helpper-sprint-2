@@ -1,9 +1,10 @@
 /**
-* @class Valores
+* Valores
+*
 * Serve para instanciar objetos de Arrays numéricas
 * com um método para retornar seus extremos e sua média
 * 
-* @property lista
+* Construtor - lista
 * lista numérica recebida ao instanciar a classe
 */
 class Valores {
@@ -15,8 +16,9 @@ class Valores {
     }
 
     /**
-     * @method menorValor
-     * método privado interno usado no método listarValores 
+     * menorValor()
+     * 
+     * Método privado interno usado no método listarValores 
      * 
      * @returns o menor valor da lista
      */
@@ -25,8 +27,9 @@ class Valores {
     }
 
     /**
-     * @method maiorValor
-     * método privado interno usado no método listarValores 
+     * maiorValor()
+     * 
+     * Método privado interno usado no método listarValores 
      * 
      * @returns o maior valor da lista
      */
@@ -35,8 +38,9 @@ class Valores {
     }
 
     /**
-     * @method somarValores
-     * método auxiliar usado em função reduce para calcular o somatório
+     * somarValores()
+     * 
+     * Método auxiliar usado em função reduce para calcular o somatório
      * 
      * @param valor - primeiro número a ser somado
      * @param auxiliar - segundo número a ser somado
@@ -48,8 +52,9 @@ class Valores {
     }
 
     /**
-     * @method valorMedio
-     * método privado interno usado no método listarValores 
+     * valorMedio()
+     * 
+     * Método privado interno usado no método listarValores 
      * 
      * @returns a média aritmética entre os valores da lista
      */
@@ -58,8 +63,9 @@ class Valores {
     }
 
     /**
-     * @method listarValores
-     * método principal da classe, usado para retornar os valores da lista
+     * listarValores()
+     * 
+     * Método principal da classe, usado para retornar os valores da lista
      * 
      * @returns Array numérica contendo o maior, menor e valor médio
      */

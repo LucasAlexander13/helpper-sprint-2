@@ -1,21 +1,24 @@
 /**
-* @class Valores
+* Valores
+*
 * Serve para instanciar objetos de Arrays numéricas
 * com um método para retornar seus extremos e sua média
 * 
-* @property lista
+* Constructor - Array<any>
+* 
 * lista numérica recebida ao instanciar a classe
 */
 class Valores {
-    private lista: Array<number>;
+    private lista: Array<number> = [];
     // utiliza o método converterLista para armazenar os valores da lista
     constructor(listaInserida: Array<any>){
         this.converterLista(listaInserida)
     }
 
     /**
-     * @method converterLista
-     * converte os valores da listaInserida e adiciona à lista
+     * converterLista()
+     * 
+     * Converte os valores da listaInserida e adiciona à lista
      * 
      * @param listaInserida - Array de valores que serão filtrados e passados para a lista 
      */
@@ -23,7 +26,7 @@ class Valores {
         // para cada item na lista inserida...
         for (let indice: number = 0; indice < listaInserida.length; indice++){
             // armazena o valor e checa se é numérico, adicionando à lista
-            let valor = Number(listaInserida[indice]);
+            let valor: number = Number(listaInserida[indice]);
             if (!isNaN(valor)){
                 this.lista.push(valor);
             }
@@ -31,15 +34,16 @@ class Valores {
     }
 
     /**
-     * @method retornarValores
-     * método principal da classe, usado para retornar os valores da lista
+     * listarValores()
      * 
-     * declara os valores da lista e calcula o menor e maior valor, assim como
+     * Método principal da classe, usado para retornar os valores da lista
+     * 
+     * Declara os valores da lista e calcula o menor e maior valor, assim como
      * a média aritmética entre eles
      * 
      * @returns Array numérica contendo o maior, menor e valor médio
      */
-    retornarValores(): Array<number> {
+    listarValores(): Array<number> {
         // declaração dos valores usados no algoritmo
         let somatoria: number = 0;
         let maiorValor: number = this.lista[0];
@@ -65,3 +69,8 @@ class Valores {
         return [maiorValor, menorValor, valorMedio];
     }
 }
+
+
+// Teste do pardigma imperativo 
+const listaNumerica: Valores = new Valores([1, "Gato", 2, "3", 4, 5]);
+console.log(listaNumerica.listarValores());

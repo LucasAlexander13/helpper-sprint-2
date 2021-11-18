@@ -6,11 +6,13 @@ let lista = [
     { "id": 4, "name": "Nicolau Copérnico", "bio": "Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar." }
 ];
 /**
- * @class Cientistas
+ * Cientistas
+ *
  * Representa uma Array de Pessoas, contendo métodos que permitem a manipulação
  * das informações contidas nessa Array de Objetos.
  *
- * @property listaCientistas
+ * Constructor - listaCientistas
+ *
  * Array de objetos do tipo Pessoa, recebida ao instanciar a classe.
  */
 class Cientistas {
@@ -19,7 +21,8 @@ class Cientistas {
         this.listaCientistas = listaInserida;
     }
     /**
-     * @method retornarInfo
+     * retornarInfo()
+     *
      * Encontra a informação da lista a partir do id passado como parâmetro
      *
      * @param id - número a ser consultado na lista, usado como índice
@@ -32,7 +35,8 @@ class Cientistas {
         return (_a = this.listaCientistas.find((pessoa) => pessoa.id === id)) === null || _a === void 0 ? void 0 : _a[tipo];
     }
     /**
-     * @method apagarItem
+     * apagarItem()
+     *
      * Filtra a lista removendo os itens do id passado
      *
      * @param id - número do item que será removido da lista a partir do filter
@@ -43,7 +47,8 @@ class Cientistas {
         return this.listaCientistas.filter((pessoa) => pessoa.id !== id);
     }
     /**
-     * @method alterarInfo
+     * alterarInfo()
+     *
      * Altera informações a partir do id e do tipo de informação passados
      *
      * @param id - número a ser consultado na lista, usado como índice

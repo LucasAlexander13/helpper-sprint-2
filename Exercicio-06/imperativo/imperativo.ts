@@ -13,11 +13,13 @@ let lista: Array<Pessoa> = [
 ];
 
 /**
- * @class Cientistas
+ * Cientistas
+ * 
  * Representa uma Array de Pessoas, contendo métodos que permitem a manipulação
  * das informações contidas nessa Array de Objetos.
  * 
- * @property listaCientistas
+ * constructor - listaCientistas
+ * 
  * Array de objetos do tipo Pessoa, recebida ao instanciar a classe.
  */
 class Cientistas {
@@ -28,7 +30,8 @@ class Cientistas {
     }
 
     /**
-     * @method retornarInfo
+     * retornarInfo()
+     * 
      * Encontra a informação da lista a partir do id passado como parâmetro
      * 
      * @param id - número a ser consultado na lista, usado como índice
@@ -37,7 +40,7 @@ class Cientistas {
      * @returns retorna a informação do tipo especificado se encontrar o id
      */
     retornarInfo(id: number, tipo: string): string {
-        let info: string;
+        let info: any;
         // para cada objeto na listaCientistas...
         for(let indice: number = 0; indice < this.listaCientistas.length; indice++) {
             // se o id for igual ao id inserido: retorna a informação do tipo solicitado
@@ -49,7 +52,8 @@ class Cientistas {
     }
 
     /**
-     * @method apagarItem
+     * apagarItem()
+     * 
      * Filtra a lista removendo os itens do id passado
      * 
      * @param id - número do item que será removido da lista a partir do filter 
@@ -68,7 +72,8 @@ class Cientistas {
     }
 
     /**
-     * @method alterarInfo
+     * alterarInfo()
+     * 
      * Altera informações a partir do id e do tipo de informação passados
      * 
      * @param id - número a ser consultado na lista, usado como índice

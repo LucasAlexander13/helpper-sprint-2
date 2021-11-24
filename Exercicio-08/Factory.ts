@@ -27,7 +27,7 @@ export class FabricaPessoa {
             case EnumPessoa.COPERNICO:
                 return new Copernico();
             default:
-                return new Pessoa();
+                return undefined;
         }
     }
 }
@@ -39,8 +39,7 @@ export class FabricaPessoa {
  */
 class Lovelace extends Pessoa{
     constructor(){
-        super(1, EnumPessoa.LOVELACE);
-        this.bio = "Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina.";
+        super(1, EnumPessoa.LOVELACE, "Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina.");
         this.homenageAda = true;
     }
 }
@@ -52,8 +51,7 @@ class Lovelace extends Pessoa{
  */
 class Turing extends Pessoa{
     constructor(){
-        super(2, EnumPessoa.TURING);
-        this.bio = "Alan Turing foi um matemático, cientista da computação, lógico, criptoanalista, filósofo e biólogo teórico britânico, ele é amplamente considerado o pai da ciência da computação teórica e da inteligência artificia.";  
+        super(2, EnumPessoa.TURING, "Alan Turing foi um matemático, cientista da computação, lógico, criptoanalista, filósofo e biólogo teórico britânico, ele é amplamente considerado o pai da ciência da computação teórica e da inteligência artificia.");
     }
 }
 
@@ -64,8 +62,7 @@ class Turing extends Pessoa{
  */
 class Tesla extends Pessoa{
     constructor(){
-        super(3, EnumPessoa.TESLA);
-        this.bio = "Nikola Tesla foi um inventor, engenheiro eletrotécnico e engenheiro mecânico sérvio, mais conhecido por suas contribuições ao projeto do moderno sistema de fornecimento de eletricidade em corrente alternada.";
+        super(3, EnumPessoa.TESLA, "Nikola Tesla foi um inventor, engenheiro eletrotécnico e engenheiro mecânico sérvio, mais conhecido por suas contribuições ao projeto do moderno sistema de fornecimento de eletricidade em corrente alternada.");
     }
 }
 
@@ -76,7 +73,6 @@ class Tesla extends Pessoa{
  */
 class Copernico extends Pessoa{
     constructor(){
-        super(4, EnumPessoa.COPERNICO);
-        this.bio = "Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar.";
+        super(4, EnumPessoa.COPERNICO, "Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar.");
     }
 }

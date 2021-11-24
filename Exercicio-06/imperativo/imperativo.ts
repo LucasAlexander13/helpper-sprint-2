@@ -4,6 +4,11 @@ interface Pessoa {
     name: string,
     bio: string
 }
+
+enum EnumTipo {
+    name = 'name',
+    bio = "bio"
+}
 // Array de Pessoa que será usada como parâmetro
 let lista: Array<Pessoa> = [
     {"id" : 1, "name": "Ada Lovelace", "bio" : "Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina"},
@@ -39,7 +44,7 @@ class Cientistas {
      * 
      * @returns retorna a informação do tipo especificado se encontrar o id
      */
-    retornarInfo(id: number, tipo: string): string {
+    retornarInfo(id: number, tipo: EnumTipo): string {
         let info: any;
         // para cada objeto na listaCientistas...
         for(let indice: number = 0; indice < this.listaCientistas.length; indice++) {
@@ -82,15 +87,19 @@ class Cientistas {
      * 
      * @returns retorna a listaCientistas com as informações mudadas
      */
-    alterarInfo(id: number, tipo: string, info: string): Array<Pessoa> {
+    alterarInfo(id: number, tipo: EnumTipo, info: string): Array<Pessoa> {
         // para cada objeto na listaCientistas...
         for(let indice: number = 0; indice < this.listaCientistas.length; indice++) {
             // se o id for igual ao id inserido: altera o tipo de informação para info
             if (this.listaCientistas[indice]['id'] === id) {
-                if (tipo === 'name') { this.listaCientistas[indice]['name'] = info } 
-                else if (tipo === 'bio') { this.listaCientistas[indice]['bio'] = info }
+                if (tipo) { this.listaCientistas[indice][tipo] = info } 
             }
         }
         return this.listaCientistas;
     }
 }
+
+let cientista: Cientistas = new Cientistas(lista);
+console.log(cientista.retornarInfo(2, EnumTipo.bio));
+console.log(cientista.alterarInfo(2, EnumTipo.name, "Alanzoka"));
+console.log(cientista.apagarItem(2));

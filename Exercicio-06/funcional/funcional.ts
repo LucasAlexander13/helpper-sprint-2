@@ -4,6 +4,12 @@ interface Pessoa {
     name: string,
     bio: string
 }
+
+enum EnumTipo {
+    name = "name",
+    bio = "bio"
+}
+
 // Array de Pessoa que será usada como parâmetro
 let lista: Array<Pessoa> = [
     {"id" : 1, "name": "Ada Lovelace", "bio" : "Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina"},
@@ -36,12 +42,15 @@ class Cientistas {
      * Encontra a informação da lista a partir do id passado como parâmetro
      * 
      * @param id - número a ser consultado na lista, usado como índice
-     * @param tipo - string do tipo de informação a ser retornada, podendo ser "bio" ou "name"
+     * @param tipo - enum do tipo de informação a ser retornada, podendo ser "bio" ou "name"
      * 
      * @returns retorna a informação do tipo especificado se encontrar o id
      */
-    retornarInfo(id: number, tipo: string): string {
-        return this.listaCientistas.find((pessoa: Pessoa) => pessoa.id === id)?.[tipo] as string;
+    retornarInfo(id: number, tipo: EnumTipo): string {
+        const indice: number = this.listaCientistas.findIndex(lista => lista.id === id);
+        const idInexistente: number = -1;
+        if (indice !== idInexistente) { return this.listaCientistas[indice][tipo] }
+        else { return "Id inválido" }
     }
  
     /**
@@ -63,12 +72,12 @@ class Cientistas {
      * Altera informações a partir do id e do tipo de informação passados
      * 
      * @param id - número a ser consultado na lista, usado como índice
-     * @param tipo - string do tipo de informação a ser retornada, podendo ser "bio" ou "name"
+     * @param tipo - enum do tipo de informação a ser retornada, podendo ser "bio" ou "name"
      * @param info - string contendo a nova informação que substituirá a antiga
      * 
      * @returns retorna a listaCientistas com as informações mudadas
      */
-    alterarInfo(id: number, tipo: string, info: string): Array<Pessoa> {
+    alterarInfo(id: number, tipo: EnumTipo, info: string): Array<Pessoa> {
         // encontra a posição na lista em que o id é o mesmo ao inserido, e -1 se inexistente
         const indice: number = this.listaCientistas.findIndex(lista => lista.id === id);
         const idInexistente: number = -1;
@@ -78,3 +87,8 @@ class Cientistas {
         return this.listaCientistas;
     }
 }
+
+let cientista: Cientistas = new Cientistas(lista);
+console.log(cientista.retornarInfo(2, EnumTipo.bio));
+console.log(cientista.alterarInfo(2, EnumTipo.name, "Alanzoka"));
+console.log(cientista.apagarItem(2));

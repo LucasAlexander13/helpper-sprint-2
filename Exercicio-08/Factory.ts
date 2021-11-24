@@ -18,11 +18,16 @@ export class FabricaPessoa {
      */
     retornarPessoa(cientista: EnumPessoa): Pessoa {
         switch(cientista) {
-            case EnumPessoa.Lovelace: return new Lovelace();
-            case EnumPessoa.Turing: return new Turing();
-            case EnumPessoa.Tesla: return new Tesla();
-            case EnumPessoa.Copernico: return new Copernico();
-            default: return null;
+            case EnumPessoa.Lovelace: 
+                return new Lovelace();
+            case EnumPessoa.Turing:
+                return new Turing();
+            case EnumPessoa.Tesla:
+                return new Tesla();
+            case EnumPessoa.Copernico:
+                return new Copernico();
+            default:
+                return null;
         }
     }
 }

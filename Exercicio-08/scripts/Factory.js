@@ -2,35 +2,37 @@ import { Pessoa } from "./Pessoa";
 import { EnumPessoa } from "./Enum";
 /**
  * FabricaPessoa
- * 
+ *
  * Classe utilizada para permitir a instanciação de objetos
  * de acordo com a opção escolhida
  */
 export class FabricaPessoa {
     /**
      * retornarPessoa
-     * 
+     *
      * Método que retorna a instância de uma subclasse da classe Pessoa
-     * 
+     *
      * @param EnumPessoa que indica o nome da pessoa
      * @returns nova subclasse de pessoa
      */
     retornarPessoa(cientista) {
-        if (cientista === EnumPessoa.Lovelace)
-            return new Lovelace();
-        else if (cientista === EnumPessoa.Turing)
-            return new Turing();
-        else if (cientista === EnumPessoa.Tesla)
-            return new Tesla();
-        else if (cientista === EnumPessoa.Copernico)
-            return new Copernico();
-        else
-            return null;
+        switch (cientista) {
+            case EnumPessoa.Lovelace:
+                return new Lovelace();
+            case EnumPessoa.Turing:
+                return new Turing();
+            case EnumPessoa.Tesla:
+                return new Tesla();
+            case EnumPessoa.Copernico:
+                return new Copernico();
+            default:
+                return null;
+        }
     }
 }
 /**
  * Subclasse de Pessoa
- * 
+ *
  * constrói o objeto com as informações de Ada Lovelace
  */
 class Lovelace extends Pessoa {
@@ -42,7 +44,7 @@ class Lovelace extends Pessoa {
 }
 /**
  * Subclasse de Pessoa
- * 
+ *
  * constrói o objeto com as informações de Alan Turing
  */
 class Turing extends Pessoa {
@@ -54,7 +56,7 @@ class Turing extends Pessoa {
 }
 /**
  * Subclasse de Pessoa
- * 
+ *
  * constrói o objeto com as informações de Nikola Tesla
  */
 class Tesla extends Pessoa {
@@ -66,7 +68,7 @@ class Tesla extends Pessoa {
 }
 /**
  * Subclasse de Pessoa
- * 
+ *
  * constrói o objeto com as informações de Nicolau Copérnico
  */
 class Copernico extends Pessoa {

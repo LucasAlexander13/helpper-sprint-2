@@ -7,7 +7,7 @@
  * name - string
  * bio - string
  */
-export abstract class Pessoa {
+export class Pessoa {
     protected id: number;
     protected name: string;
     protected bio: string;
@@ -34,7 +34,7 @@ export abstract class Pessoa {
      * @returns string - retorna os valores formatados do nome e da bio da pessoa
      */
     public retornarInfo(): string {
-        return `Nome: ${this.name}\nBio: ${this.bio}`
+        return `Nome: ${this.name}\nBio: ${this.bio}`;
     }
 }
 

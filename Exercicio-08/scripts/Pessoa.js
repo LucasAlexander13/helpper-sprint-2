@@ -1,8 +1,8 @@
 /**
  * Pessoa
- * 
+ *
  * Classe base que serve para criar objetos do tipo pessoa
- * 
+ *
  * id - number
  * name - string
  * bio - string
@@ -10,9 +10,9 @@
 export class Pessoa {
     /**
      * Construtor
-     * 
+     *
      * Caso receba um dos valores (id, name, bio) armazena nas propriedades
-     * 
+     *
      * @param id - number
      * @param name - string
      * @param bio - string
@@ -24,7 +24,7 @@ export class Pessoa {
     }
     /**
      * retornarInfo( )
-     * 
+     *
      * @returns string - retorna os valores formatados do nome e da bio da pessoa
      */
     retornarInfo() {

@@ -11,7 +11,7 @@ export class Pessoa {
     protected id: number;
     protected name: string;
     protected bio: string;
-    public homenageAda: boolean = false;
+    public homenageAda: string = 'Não';
 
     /**
      * Construtor
@@ -22,7 +22,7 @@ export class Pessoa {
      * @param name - string
      * @param bio - string
      */
-    constructor(id?: number, name?: string, bio?: string) {
+    constructor(id: number, name: string, bio: string) {
         this.id = id;
         this.name = name;
         this.bio = bio;

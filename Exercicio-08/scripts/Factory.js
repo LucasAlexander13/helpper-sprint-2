@@ -9,7 +9,6 @@ import { EnumPessoa } from "./Enum";
 export class FabricaPessoa {
     /**
      * retornarPessoa
-     *
      * Método que retorna a instância de uma subclasse da classe Pessoa
      *
      * @param EnumPessoa que indica o nome da pessoa
@@ -38,7 +37,7 @@ export class FabricaPessoa {
 class Lovelace extends Pessoa {
     constructor() {
         super(1, EnumPessoa.LOVELACE, "Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina.");
-        this.homenageAda = true;
+        this.homenageAda = 'Sim, por Jean Ichbiah, que criou a linguagem de programação Ada enquanto liderava uma equipe que trabalhava para o Departamento de Defesa dos Estados Unidos.';
     }
 }
 /**

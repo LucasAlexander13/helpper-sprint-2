@@ -18,7 +18,7 @@ export class Pessoa {
      * @param bio - string
      */
     constructor(id, name, bio) {
-        this.homenageAda = false;
+        this.homenageAda = 'Não';
         this.id = id;
         this.name = name;
         this.bio = bio;

@@ -10,4 +10,4 @@ console.log(ada.retornarInfo());
 
 //b) Crie um código que responda quem criou a linguagem de programação Ada, 
 //essa resposta precisa estar como propriedade do objeto da pessoa relacionada.
-console.log(`Ada foi homenageada?: ${ada.homenageAda}`);
+console.log(`Ada foi homenageada?: ${ada?.homenageAda}`);

@@ -7,5 +7,5 @@ let ada = fabrica.retornarPessoa(EnumPessoa.LOVELACE);
 console.log(ada.retornarInfo());
 //b) Crie um código que responda quem criou a linguagem de programação Ada, 
 //essa resposta precisa estar como propriedade do objeto da pessoa relacionada.
-console.log(`Ada foi homenageada?: ${ada.homenageAda}`);
+console.log(`Ada foi homenageada?: ${ada === null || ada === void 0 ? void 0 : ada.homenageAda}`);
 //# sourceMappingURL=script.js.map

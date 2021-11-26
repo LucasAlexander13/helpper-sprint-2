@@ -9,8 +9,7 @@ import { EnumPessoa } from "./Enum";
  */
 export class FabricaPessoa {
     /**
-     * retornarPessoa
-     * Método que retorna a instância de uma subclasse da classe Pessoa
+     * retornarPessoa - Método que retorna a instância de uma subclasse da classe Pessoa
      * 
      * @param EnumPessoa que indica o nome da pessoa
      * @returns nova subclasse de pessoa
